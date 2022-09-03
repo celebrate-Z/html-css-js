@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    padding: 100px;
+  }
+  ul {
+    list-style: none;
+  }
+  ul li {
+    width: 300px;
+    border: solid 8px blueviolet;
+    overflow: hidden;
+    position: relative;
+  }
+  ul li img {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+  }
+  ul li >span {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: blueviolet;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    line-height: 2em;
+    left:10px ;
+    top: 10px;
+    box-shadow: 0 0 10px #333; ;
+    z-index: 3;
+  }
+
+  ul li:hover img {
+    z-index: -2;
+  }
+  div {
+    width: 100%;
+    height: 100%;
+    background: blueviolet;
+    position: relative;
+    z-index:  1;
+  }
+  div h2 {
+    text-align: center;
+    line-height: 8em;
+    color: white;
+  }
+</style>
+<body>
+<ul>
+  <li>
+    <span>热</span>
+    <img src="love.jpeg" alt="">
+    <div>
+      <h2>庆贺&&冰冰</h2>
+    </div>
+  </li>
+</ul>
+</body>
+</html>
