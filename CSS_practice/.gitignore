@@ -1,4 +1,5 @@
 ### Diff template
+.idea
 *.patch
 *.dif
 
