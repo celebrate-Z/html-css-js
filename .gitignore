@@ -1,6 +1,7 @@
 ### Diff template
 *.patch
 *.dif
+
 ### Node template
 # Logs
 logs
