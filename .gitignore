@@ -1,6 +1,7 @@
 *.idea
 .idea
 .DS_Store
+!*.js
 ### Java template
 # Compiled class file
 *.class
