@@ -13,25 +13,34 @@
     //   name: "后盾人",
     //   show: function() {
     //     return this.name;
+    //   },
+    //   hello(){
+    //     return "hello"
     //   }
     // };
-    // // console.log(edu.show());
+    // console.log(edu.show());
+    // console.log(edu.hello())
 
     // console.log(window);
     // console.log(this == edu);
     // name = "这是window的name";
+
+    //
     // let edu = {
     //   site: "后盾人",
     //   show: function() {
     //     console.log(this);
     //     function render() {
     //       console.log(this.site);
+    //       console.log(this)
     //     }
     //     render();
     //     // return this.name;
     //   }
-    // };
-    // console.log(edu.show());
+    // }
+    // console.log(edu.show())
+    //
+
     function User(name) {
       this.name = name;
       this.show = function() {

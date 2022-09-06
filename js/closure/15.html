@@ -11,9 +11,12 @@
     <div desc="hdcms">开源产品</div>
   </body>
   <script>
+
     let divs = document.querySelectorAll("div");
     divs.forEach(function(item) {
       let desc = item.getAttribute("desc");
+      console.log(desc);
+    // })
       item.addEventListener("click", function() {
         // console.log(item.getAttribute("desc"));
         console.log(desc);

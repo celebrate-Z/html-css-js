@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <button>
+    zhouqinghe.com
+  </button>
+<button>
+  zqhcloud.cn
+</button>
+</body>
+<script>
+  let zqh = {
+    site : "周庆贺",
+    hello:function () {
+      let buttons =document.querySelectorAll('button')
+      // console.log(buttons)
+      let myname =this;
+      buttons.forEach(function(value) {
+        value.addEventListener("click",function () {
+          console.log(myname.site+this.innerHTML);
+        });
+      });
+    }
+  }
+  zqh.hello()
+</script>
+</html>

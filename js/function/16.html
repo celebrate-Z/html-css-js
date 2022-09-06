@@ -21,8 +21,17 @@
           return `${this.site}-${value}`;
           // console.log(this);
         }, this);
+      },
+      hello(){
+        // console.log(this.lists)
+        // let zqhlesson = this
+       return this.lists.map((event)=> {
+         console.log(this)
+       })
       }
     };
-    console.table(Lesson.show());
+    Lesson.hello()
+    // console.table(Lesson.show());
+    // console.log(Lesson.hello())
   </script>
 </html>
