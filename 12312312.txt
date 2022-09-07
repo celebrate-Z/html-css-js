@@ -1,4 +1,7 @@
+add
 暂存区
-
+commit
 本地存储
 
+push
+远程分之
