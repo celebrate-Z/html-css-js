@@ -20,10 +20,12 @@
       let id = setInterval(() => callback(id), delay);
     }
     interval(timeId => {
+      console.log(timeId)
       const div = document.querySelector("div");
       let left = parseInt(window.getComputedStyle(div).left);
       div.style.left = left + 10 + "px";
       if (left >= 200) {
+        console.log(clearInterval);
         clearInterval(timeId);
         interval(timeId => {
           let width = parseInt(window.getComputedStyle(div).width);

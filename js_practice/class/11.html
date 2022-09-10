@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+  class User{
+    _site ="灯冰冰";
+    constructor(name) {
+      this.name =name;
+    }
+    set site(url){
+        if (!/^https?:/i.test(url)){
+            throw  new Error("非法的请求地址");
+        }
+        this._site = url;
+    }
+  }
+  let  zqh = new User("周庆贺");
+  zqh.name = "李四";
+  zqh.site="https://dengbingbing";
+  console.log(zqh)
+
+</script>
+</html>

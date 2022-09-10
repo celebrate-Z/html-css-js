@@ -9,16 +9,37 @@
     // setTimeout(() => {
     //   console.log("houdunren.com");
     // }, 2000);
-    function timeout(delay = 1000) {
-      return new Promise(resolve => setTimeout(resolve, delay));
+
+
+    // function timeout(delay = 1000) {
+    //   return new Promise(resolve => setTimeout(resolve, delay));
+    // }
+    // timeout(2000)
+    //   .then(() => {
+    //     console.log("houdunren.com");
+    //     return timeout(2000);
+    //   })
+    //   .then(value => {
+    //     console.log("hdcms.com");
+    //   });
+    function f2() {
+      return "22222";
     }
-    timeout(2000)
-      .then(() => {
-        console.log("houdunren.com");
-        return timeout(2000);
+
+    async function f3(){
+      return new Promise((resolve) => {
+        setTimeout(()=>{
+          resolve("abd");
+        },2000)
       })
-      .then(value => {
-        console.log("hdcms.com");
-      });
+    }
+
+    async function f1(){
+      let a = await f3();
+      console.log("111111")  //1111 f2
+      console.log(a);
+
+    }
+    f1();
   </script>
 </html>

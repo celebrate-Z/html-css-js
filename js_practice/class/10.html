@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>周庆贺</title>
+</head>
+<body>
+</body>
+<script>
+  class  request {
+    constructor(url) {
+      this._host =url;
+    }
+    get host(){
+      return this._host;
+    }
+    set host(url){
+      if (!/^https?:\/\//i.test(url)){
+        throw  new Error("地址错误");
+      }
+      this._host = url;
+    }
+  }
+  let zqh = new request("https://www.zqhcloud.com");
+  zqh.host = "zhouqinghe.com";
+  zqh.host="https://www.zqhcloud.com";
+  console.log(zqh.host)
+
+</script>
+</html>

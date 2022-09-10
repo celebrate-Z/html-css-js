@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>周庆贺</title>
+</head>
+<body>
+</body>
+<script>
+    const data =[
+        {name:"js",price:100},
+        {name:"mysql",price: 212},
+        {name:"vue.js",price: 98}
+    ];
+    class lesson {
+        constructor(data) {
+            this.model =data;
+        }
+        static createBatch(data){
+          return data.map(item =>new lesson(item))
+        }
+        static  maxPrice(data){
+            return data.sort((a,b)=>{
+                return a.price-b.price>0;
+            })[0];
+        }
+    }
+    let a  =lesson.createBatch(data)
+    console.log(a);
+    console.log(lesson.maxPrice(data))
+
+</script>
+</html>
+
+
+
+
+
+
+

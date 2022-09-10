@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>周庆贺</title>
+</head>
+<body>
+</body>
+<script>
+  const protecteds = Symbol();
+  class Common{
+    constructor() {
+      this[protecteds] = {};
+      this[protecteds].host="https:zhouqinghe";
+    }
+    set host(url){
+      if (!/^https?:/i.test(url)){
+        throw new Error("错误的请求");
+      }
+      this[protecteds].host = url;
+    }
+    get host(){
+      return this[protecteds].host;
+    }
+  }
+  class User extends Common {
+    constructor(name) {
+      super();
+      this[protecteds].name = name ;
+    }
+    get name(){
+      return this[protecteds].name;
+    }
+  }
+  let zqh = new User("周庆贺")
+  console.log(zqh)
+</script>
+</html>
